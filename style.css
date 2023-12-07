@@ -1,0 +1,637 @@
+/* Police du site */
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    color: white;
+}
+
+
+/* Animation de fondu à l'entrée pour une apparence plus fluide */
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    animation: fadeInAnimation ease 2s;
+}
+
+
+/* Masquer la barre de défilement dans le navigateur */
+body::-webkit-scrollbar {
+    display: none;
+    overflow-x: hidden;
+}
+
+
+/* Pour les navigateurs autres que Chrome */
+body {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+
+/* Animation de fondu à l'entrée - détails */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+
+/* Conteneur principal pour le contenu */
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 35%;
+}
+
+
+/* Styles pour chaque section du site */
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* Espacement en bas des titres de section */
+section h3 {
+    padding-bottom: 0.5em;
+}
+
+
+/* Désactiver la fonction pointer-events pour les images (non cliquables) */
+img.wide {
+    pointer-events: none;
+    width: 100%;
+}
+
+img {
+    pointer-events: none;
+}
+
+
+/* Image principale dans la section "home" */
+.picture {
+    height: 30vw;
+    border-radius: 10px;
+
+}
+
+
+/* Barre de navigation fixée à droite */
+nav {
+    position: fixed;
+    right: 2%;
+    top: 15em;
+    font-weight: 500;
+}
+
+
+/* Styles pour chaque élément de la barre de navigation */
+nav ul li {
+    padding: 0.2em;
+    font-size: 2.5em;
+    text-align: right;
+}
+
+
+/* Styles pour les différents niveaux de titres */
+h1 {
+    font-size: 4em;
+}
+h2 {
+    font-size: 3em;
+    font-weight: lighter;
+}
+h3 {
+    font-size: 3em;
+}
+h4 {
+    font-size: 2.5em;
+}
+h5 {
+    font-size: 1.8em;
+    margin-bottom: 0.2em;
+    color: black;
+}
+h6 {
+    font-size: 1.3em;
+    margin-bottom: 0.2em;
+    color: black;
+}
+
+
+/* Styles pour les paragraphes */
+p {
+    font-size: 1.5em;
+    word-break: normal;
+    margin-bottom: 3%;
+    color: black;
+}
+.para p {
+    font-size: 1.5em;
+    word-break: normal;
+    margin-bottom: 3%;
+    color: rgb(255, 255, 255);
+}
+
+
+/* Liste sans puces */
+li {
+    list-style: none;
+}
+
+
+/* Styles pour les liens */
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color .2s ease; 
+}
+
+
+/* Changement de couleur au survol des liens */
+a:hover {
+    color: #B49C68;
+}
+
+
+/* Styles pour les éléments de liste dans les sections */
+section li {
+    font-size: 1em;
+}
+
+
+/* Styles spécifiques pour les liens dans les sections */
+section li a {
+    font-size: 2em;
+}
+
+
+/* Carte générique pour afficher des informations avec une bordure */
+.card {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2vw;
+    margin: 1vw;
+    min-width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vw 2vw 1vw 4vw;
+    box-shadow: 10px 10px black;;
+    background-color: white;
+}
+
+
+/* Image large à l'intérieur des cartes */
+.card .wide {
+    height: 25vw;
+    padding-left: 0%;
+    width: fit-content;
+    overflow: hidden;
+    object-fit: fill;
+    border-radius: 10px;
+
+}
+
+
+/* Styles pour les paragraphes à l'intérieur des cartes */
+.card p {
+    font-size: 1vw;
+}
+
+/* Pied de page centré */
+footer {
+    text-align: center;
+    margin: -2em;
+    font-weight: 600;
+}
+
+
+/* Styles pour les expériences professionnelles (non utilisées actuellement) */
+.exp {
+    display: flexbox;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1em;
+}
+
+
+/* Icône des expériences professionnelles */
+.exp-icon {
+    height: 6em;
+    margin: 0 0.75em;
+}
+
+
+/* Partie centres d'interet */
+#men-int .nav-menu{
+    position: fixed;
+    right: 35%;
+    top: 38em;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+#interest .card {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2vw;
+    margin: 1vw;
+    min-width: 50vw;
+    min-height: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vw 2vw 1vw 4vw;
+    box-shadow: 10px 10px black;
+    background-color: white;
+}
+
+
+/* centre d'interet */ 
+#centreint{
+    display: none;
+}
+
+
+/*Boutons pour le centre d'interet off en mode bureau*/ 
+button {
+    display: none;
+}
+
+
+/* Video dans le fond */
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 130%;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+/******************************************************************************************************  écrans type tablette ***************************************************************************************************************************************************/
+@media screen and (max-width: 1300px) {
+
+/* Video dans le fond */
+    video{
+        position: fixed;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: -1;
+        width: 800%;
+    }
+    
+/* centre d'interet */ 
+    #interest{
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #centreint{
+        display: block;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 0;
+    }
+
+/*Image*/    
+    .picture {
+        height: 40vw;
+        border-radius: 10px;
+
+    }
+
+    nav ul li {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+    
+    h2 {
+        font-size: 2.3em;
+        font-weight: lighter;
+    }
+    
+    h3 {
+        font-size: 2em;
+    }
+    
+    h4 {
+        font-size: 1.7em;
+    }
+    
+    h5 {
+        font-size: 1.5em;
+    }
+
+    h6 {
+        font-size: 1.2em;
+    }
+    
+    p {
+        font-size: 1.3em;
+    }
+
+    section li {
+        font-size: 0.8em;
+        margin: 0.5em;
+    }
+    
+    section li a {
+        font-size: 2em;
+    }
+
+    .card {
+        margin: 2vw;
+        min-width: 40vw;
+        color: black;
+    }
+
+    .card p {
+        font-size: 1.3vw;
+    }
+
+/*Boutons pour revenir en arriere*/    
+    button {
+        border: 0;
+        display: block;
+        background-color: transparent;
+        font-size: x-large;
+    }
+    .boutons{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .boutonsang{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        font-size: small;
+    }
+.tabs{
+    display: flex;
+    text-align: center;
+}
+
+
+
+
+/******************************************************************************************************  écrans type telephone ***************************************************************************************************************************************************/    
+@media screen and (max-width: 900px) {
+
+.tabs{
+    display: flex;
+    text-align: center;
+}
+
+/* Video dans le fond */    
+        video{
+            position: fixed;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            z-index: -1;
+            width: 800%;
+        }
+ 
+/* centre d'interet */         
+        #interest{
+            margin: 20;
+            padding: 0;
+        }
+
+        #centreint{
+            display: block;
+            border: 2px;
+            border-color: #B49C68;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+        }
+
+        /* Ajustement de la largeur du corps de la page */
+        body {
+            width: 100vw;
+            max-width: 100%;
+        }
+
+        /* Ajustement de la taille de la barre de navigation */
+        nav {
+            font-size: 0;
+        }
+
+        /* Ajustement des marges du contenu principal */
+        .content {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        /* Styles spécifiques pour chaque section */
+        section {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: baseline;
+            padding-top: 3em;
+            margin-top: 2em;
+        }
+
+        /* Ajustements spécifiques pour la section "home" */
+        #home {
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Ajustement de la marge en bas de la section "contact" */
+        #contact {
+            margin-bottom: 6em;
+        }
+
+        /* Ajustements spécifiques pour l'image principale dans la section "home" */
+        .picture {
+            height: 60vw;
+            border-radius: 10px;
+
+        }
+
+        /* Ajustement de la taille des éléments de la barre de navigation */
+        nav ul li {
+            font-size: 1.1em;
+        }
+
+        /* Ajustement de la taille du titre principal "h1" */
+        h1 {
+            font-size: 7vw;
+        }
+        
+        /* Ajustement de la taille du titre secondaire "h2" */
+        h2 {
+            font-size: 5vw;
+            font-weight: lighter;
+        }
+        
+        h3 {
+            font-size: 1.5em;
+        }
+        
+        h4 {
+            font-size: 1.2em;
+        }
+        
+        h5 {
+            font-size: 1.2em;
+        }
+
+        h6 {
+            font-size: .9em;
+        }
+        
+        p {
+            font-size: 1em;
+        }
+    
+        section li {
+            font-size: 0.8em; 
+        }
+        
+        section li a {
+            font-size: 2em;
+            margin: 0.7em 0;
+        }
+
+        /* Ajustements spécifiques pour les cartes */
+        .card {
+            margin: 3vw;
+            width: 65vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: baseline;
+        }
+
+        /* Ajustements spécifiques pour les images larges à l'intérieur des cartes */
+        .card .wide {
+            width: 240px;
+            height: 180px;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        /* Ajustement de la taille des paragraphes à l'intérieur des cartes */
+        .card p {
+            font-size: 0.8em;
+        }
+
+/*Boutons pour revenir en arriere*/          
+        button {
+            border: 0;
+            display: block;
+            background-color: transparent;
+            font-size: x-large;
+            font-weight: bold;
+        }
+        
+        .boutons{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            font-size: small;
+        }
+        .boutonsang{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column-reverse;
+            font-size: small;
+        }
+    }
+}
+
+
+
+
+
+.warpper{
+  padding: 4%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tab{
+  cursor: pointer;
+  padding:10px 20px;
+  margin:0px 2px;
+  background:#000;
+  display:inline-block;
+  color:#fff;
+  border-radius:3px 3px 0px 0px;
+  box-shadow: 0 0.5rem 0.8rem #00000080;
+}
+.panels{
+  background:#fffffff6;
+  box-shadow: 0 2rem 2rem #00000080;
+  min-height:200px;
+  width:100%;
+  max-width:500px;
+  border-radius:20px;
+  overflow:hidden;
+  padding:50px;  
+}
+.panel{
+  display:none;
+  animation: fadein .8s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.panel-title{
+  font-size:1.5em;
+  font-weight:bold;
+  color: black;
+}
+.radio{
+  display:none;
+}
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel{
+  display:block
+}
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab{
+  background:#fffffff6;
+  color:#000;
+  border-top: 3px solid #000;
+}
+
+.centreinteret{
+    text-align: center;
+}
