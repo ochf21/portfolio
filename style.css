@@ -135,6 +135,24 @@ p {
     margin-bottom: 3%;
     color: black;
 }
+
+#three-panel ul li {
+    font-size: 1.0em;
+    word-break: normal;
+    margin-bottom: 1%;
+    color: black;
+    padding: 10px;
+    margin-left: -48px;
+}
+
+strong {
+    font-size: 1.0em;
+    word-break: normal;
+    margin-bottom: 1%;
+    color: black;
+}
+
+
 .para p {
     font-size: 1.5em;
     word-break: normal;
